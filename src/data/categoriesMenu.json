@@ -1,0 +1,23 @@
+{
+  "/category/boys": {
+    "title": "Boys"
+  },
+  "/category/brands": {
+    "title": "Brands"
+  },
+  "/category/fan-gear-jerseys": {
+    "title": "Fan Gear & Jerseys"
+  },
+  "/category/our-picks": {
+    "title": "Our Picks"
+  },
+  "/category/girls": {
+    "title": "Girls"
+  },
+  "/category/men": {
+    "title": "Men"
+  },
+  "/category/women": {
+    "title": "Women"
+  }
+}

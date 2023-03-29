@@ -1,0 +1,22 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.options": {
+    "extensions": [".js", ".jsx"]
+  },
+  "files.eol": "\n",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
