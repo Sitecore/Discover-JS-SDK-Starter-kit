@@ -1,4 +1,4 @@
-import { setWidget, WidgetDataType, WidgetsProvider } from '@sitecore-discover/react';
+import { WidgetsProvider } from '@sitecore-discover/react';
 import { createTheme } from '@sitecore-discover/ui';
 import 'animate.css/animate.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,7 +10,6 @@ import Header from './components/Header';
 import TopMenu from './components/TopMenu';
 import { BASE_PATH } from './helpers/constants';
 import { CartProvider } from './hooks/cart';
-import { Recommendation } from './widgets/BasicRecommendation';
 // eslint-disable-next-line import/extensions
 import 'bootstrap/dist/js/bootstrap.bundle.js';
 import 'react-notifications-component/dist/theme.css';
@@ -60,18 +59,6 @@ function App() {
   });
   const bodyElement = document.body;
   setStyle(bodyElement, style);
-
-  setWidget('hs_random', {
-    type: WidgetDataType.RECOMMENDATION,
-    component: Recommendation,
-    options: {
-      properties: {
-        initial: {
-          title: 'Similar Items',
-        },
-      },
-    },
-  });
 
   return (
     <WidgetsProvider
