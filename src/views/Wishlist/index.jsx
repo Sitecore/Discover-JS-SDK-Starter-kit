@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import getProductUrl from '../../helpers/getProductUrl';
 import { useWishlist } from '../../hooks/wishlist';
 
 const WishlistView = () => {
@@ -21,11 +22,11 @@ const WishlistView = () => {
             <div className="col-md-12">
               <ul className="list-group">
                 {wishlist.map((p) => (
-                  <li className="list-group-item" key={`item-${p.data.image_skuurl}`}>
+                  <li className="list-group-item" key={`item-${p.data.sku}`}>
                     <div className="media d-flex">
                       <img src={p.data.image_url} className="mr-3" width="80" alt={p.data.name} />
                       <div className="media-body ms-3">
-                        <Link to={`/product/detail/${p.data.sku}`} className="mt-0 text-decoration-none">
+                        <Link to={getProductUrl(p.data)} className="mt-0 text-decoration-none">
                           <h5 className="mt-0">{p.data.name}</h5>
                         </Link>
                       </div>
