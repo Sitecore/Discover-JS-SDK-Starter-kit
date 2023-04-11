@@ -39,9 +39,9 @@ The Discover Starter Kit needs to have Node.js installed to build the project. W
 
 ### Environment variables
 
-The Discover Starter Kit needs some environment variables to work. You can get the values for them in the [Developers resources section](https://doc.sitecore.com/discover/en/developers/discover-developer-guide/the-api-access-tab.html) of Customer Engagement Console (CEC). For full functionality, you must create a **.env.local** file in the root of the project and add in the below environment variables.
+The Discover Starter Kit needs some environment variables to work. You can get the values for them in the [Developers resources section](https://doc.sitecore.com/discover/en/developers/discover-developer-guide/index_en.html?contextId=apiaccess) of Customer Engagement Console (CEC). For full functionality, create a **.env.local** file in the root of the project and add the following environment variables.
 
-The following variables should exist within the .env.local file:
+The following variables should exist within the **.env.local** file:
 
 ```
 REACT_APP_ENV="<environment - Expected values: prod, staging or prodEu >"
@@ -62,12 +62,10 @@ REACT_APP_ENV="<environment - Expected values: prod, staging or prodEu >"
 REACT_APP_CUSTOMER_KEY="<customer key>"
 REACT_APP_API_KEY="<API key provided in CEC>"
 ```
-(See **Environment variables** section)
 
 5.  To start the development server, run `npm start`.
 6.  To view the site, open your browser to **http://localhost:3000**
-
-In case you want to build the app for production run: `npm run build`
+7.  To build the app for production, run: `npm run build`
 
 ## Widget configurations
 
@@ -77,9 +75,7 @@ You can access the documentation for details on components, functions, query hoo
 
 ## Pages
 
-The following is a list of pages that the website has to cover all event tracking available within the SDK.
-It uses React Router to perform page navigation.
-Here, each page is a React component with a `useEffect` hook to register uri change.
+The JS SDK uses React Router to perform page navigation. Each page is a React component with a `useEffect` hook used to register uri change.
 
 For example, for home page we have:
 
@@ -91,7 +87,7 @@ useEffect(() => {
 
 With this, the SDK can change browser context and customize tracking/service response.
 
-In the starter kit, we use a higher order component called `withPageTracking` in each page to register page uri and track the page view event.
+In the starter kit, we use a higher order function called `withPageTracking` in each page to register page uri and track the page view event.
 
 ### Home
 
@@ -127,9 +123,8 @@ Events tracked are:
 Route: `/product/detail/<product sku>/<product id>`. E.g.: `/product/detail/3107756/prod1100011` shows the details of a product. It also has a recommendation widget for related products.
 
 __Note:__
-*In this case, the product information is wrapped on a `SearchResults` widget that uses a filter by sku since there
-isn't a datasource.
-It is not recommended to perform this in this way (usually the way that a Product Detail Page looks is handled by the
+*In this case, the product information is wrapped in a `SearchResults` widget that uses a filter by sku since there isn't a data source.
+It is not recommended to perform this in this way (usually the way that a product detail page looks is handled by the
 SDK consumer and the data is gathered by their own datasets).
 Sitecore Discover Services are used to search and recommend.*
 
@@ -163,7 +158,7 @@ Events tracked are:
 
 Events are an important part of the Discover platform. The JS SDK automatically fires events it can infer when they happen. To register other events, you have to verbosely dispatch them. 
 
-Refer to the [JS SDK documentation](https://doc.sitecore.com/discover/en/developers/discover-js-sdk-for-react/events.html) for details on dispatching events.
+Refer to the [JS SDK documentation](https://doc.sitecore.com/discover/en/developers/discover-js-sdk-for-react/index_en.html?contextId=events) for more about dispatching events.
 
 ### Monitoring example
 
@@ -176,9 +171,13 @@ The following video shows how you can verify the events that the SDK trigger:
 
 ## Documentation
 
-Discover documentation is written for both developers and [business users](https://doc.sitecore.com/discover/en/users/discover-user-guide/introduction-to-sitecore-discover.html).  
+Discover documentation is written for both developers and [business users](https://doc.sitecore.com/discover/en/users/discover-user-guide/index_en.html?contextId=introduction).  
 
-Integration documentation for developers covers for details on [components, functions, query hooks](https://doc.sitecore.com/discover/en/developers/discover-js-sdk-for-react/introduction-to-discover-js-sdk-for-react.html), [templates, and ui primitives](https://developers.sitecorecloud.io/discover-sdk/react/1.x-alpha/storybook/index.html).
+JS SDK for React documentation includes:
+  * [Components, functions, and query hooks](https://doc.sitecore.com/discover/en/developers/discover-js-sdk-for-react/introduction-to-discover-js-sdk-for-react.html).
+  * [Templates and ui primitives](https://developers.sitecorecloud.io/discover-sdk/react/1.x-alpha/storybook/index.html).
+  
+For data feeds and URL configuration, refer to the [Discover developer guide](https://doc.sitecore.com/discover/en/users/discover-developer-guide/index_en.html?contextId=introduction).
 
 ## Contributions
 
