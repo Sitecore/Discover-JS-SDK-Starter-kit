@@ -193,8 +193,8 @@ You can use GitHub to submit [bug reports](https://github.com/Sitecore/Discover-
 You can use GitHub to submit [feature requests](https://github.com/Sitecore/Discover-JS-SDK-Starter-kit/issues/new?template=feature_request.md) for Discover Starter Kit.
 
 
-### [Code of Conduct](CODE_OF_CONDUCT.md)
-Sitecore has adopted a Code of Conduct that we expect project participants to adhere to. Please read the full text so that you can understand what actions will and will not be tolerated.
+### Code of Conduct
+Sitecore has adopted a [Code of Conduct](CODE_OF_CONDUCT.md) that we expect project participants to adhere to. Please read the full text so that you can understand what actions will and will not be tolerated.
 
 ### Contributing Guide
 
