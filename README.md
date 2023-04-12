@@ -123,10 +123,7 @@ Events tracked are:
 Route: `/product/detail/<product sku>/<product id>`. E.g.: `/product/detail/3107756/prod1100011` shows the details of a product. It also has a recommendation widget for related products.
 
 __Note:__
-*In this case, the product information is wrapped in a `SearchResults` widget that uses a filter by sku since there isn't a data source.
-It is not recommended to perform this in this way (usually the way that a product detail page looks is handled by the
-SDK consumer and the data is gathered by their own datasets).
-Sitecore Discover Services are used to search and recommend.*
+*In this example, the product information has been filtered from the `SearchResults` widget data for demonstration purposes. We do not recommend this approach in production. Restrict Discover services to search and recommendations and create separate services for other data.*
 
 Events tracked are:
 
@@ -162,8 +159,9 @@ Refer to the [JS SDK documentation](https://doc.sitecore.com/discover/en/develop
 
 ### Monitoring example
 
-Debug event tracking in the CEC.
-The following video shows how you can verify the events that the SDK trigger:
+An example of monitoring could be debug event tracking in the CEC. The following video shows how you can verify the events that the SDK trigger:
+
+<br><br>
 
 
 ![](events.gif)
@@ -181,7 +179,7 @@ For data feeds and URL configuration, refer to the [Discover developer guide](ht
 
 ## Contributions
 
-We are very grateful to the community for contributing bug fixes and improvements. We welcome all efforts to evolve and improve the Discover Starter Kit; read below to learn how to participate in those efforts.
+We are very grateful to the community for contributing bug fixes and improvements. We welcome all efforts to evolve and improve the Discover Starter Kit. The following sections explain how you can participate in these efforts.
 
 ### Bug reports
 
@@ -202,8 +200,8 @@ If you want to make changes to the code, follow these steps:
 1. Fork the Discover Starter Kit Repo GitHub repo.
 2. Clone the forked repo to your local machine.
 3. Create a feature branch from `main` for your changes. e.g. `git checkout -b my-feature-branch`
-4. `npm install`
-5. `npm start` (to preview your changes locally)
+4. Run `npm install`
+5. Run `npm start` (to preview your changes locally)
 6. Commit, push to your remote fork of the Discover Starter Kit repo, then open a pull request (PR) to the `main` branch of the Developer Portal repo.
 
 Your changes will be reviewed and merged if appropriate.
