@@ -6,6 +6,7 @@
   "quoteProps": "consistent",
   "bracketSpacing": true,
   "arrowParens": "always",
+  "endOfLine": "auto",
   "tabWidth": 2,
   "parser": "typescript",
   "importOrder": [
