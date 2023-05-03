@@ -169,13 +169,13 @@ An example of monitoring could be debug event tracking in the CEC. The following
 
 ## Documentation
 
-Discover documentation is written for both developers and [business users](https://doc.sitecore.com/discover/en/users/discover-user-guide/index_en.html?contextId=introduction).  
+Discover documentation is written for both developers and [business users](https://doc.sitecore.com/discover/en/users/discover-user-guide/index-en.html?contextId=introduction).  
 
 JS SDK for React documentation includes:
-  * [Components, functions, and query hooks](https://doc.sitecore.com/discover/en/developers/discover-js-sdk-for-react/introduction-to-discover-js-sdk-for-react.html).
+  * [Components, functions, and query hooks](https://doc.sitecore.com/discover/en/developers/discover-js-sdk-for-react/index-en.html?contextId=introduction).
   * [Templates and ui primitives](https://developers.sitecorecloud.io/discover-sdk/react/1.x-alpha/storybook/index.html).
   
-For data feeds and URL configuration, refer to the [Discover developer guide](https://doc.sitecore.com/discover/en/users/discover-developer-guide/index_en.html?contextId=introduction).
+For data feeds and URL configuration, refer to the [Discover developer guide](https://doc.sitecore.com/discover/en/developers/discover-js-sdk-for-react/index-en.html?contextId=introduction).
 
 ## Contributions
 
