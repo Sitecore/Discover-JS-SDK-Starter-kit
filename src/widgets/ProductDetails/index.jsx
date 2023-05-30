@@ -7,11 +7,11 @@
 /* eslint-disable camelcase */
 import { faCartPlus, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useSearchResults, widget, WidgetDataType } from '@sitecore-discover/react';
+import {trackPDPViewEvent, useSearchResults, widget, WidgetDataType} from '@sitecore-discover/react';
 import { ReactComponent as IconStarFill } from 'bootstrap-icons/icons/star-fill.svg';
 import PropTypes from 'prop-types';
-import React, { useCallback, useContext, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
+import { Link } from 'react-router-dom';
 import Loader from '../../components/Loader';
 import WishlistButton from '../../components/WishlistButton';
 import getProductUrl from '../../helpers/getProductUrl';
@@ -44,16 +44,16 @@ const ProductDetails = (props) => {
   const { addProductToCart } = useCart();
   const page = useContext(PageEventContext);
 
-  // eslint-disable-next-line react/prop-types
-  const { sku: skuParam } = useParams();
   const {
     queryResult: { isLoading, data: { content: { product: { value: products = [] } = {} } = {} } = {} },
-  } = useSearchResults((query) => {
-    query.getRequest().setFilter({ sku: skuParam });
-  });
+  } = useSearchResults();
 
   const product = products.length > 0 ? products[0] : null;
   let content = <>{isLoading && <Loader enabled={isLoading} />}</>;
+
+  useEffect(() => {
+    trackPDPViewEvent(product.sku);
+  }, [product.sku]);
 
   const [productQuantity, setProductQuantity] = useState(1);
   const handleQuantityChange = useCallback(
@@ -189,4 +189,4 @@ const ProductDetails = (props) => {
   return content;
 };
 
-export default widget(ProductDetails, WidgetDataType.SEARCH_RESULTS);
+export default widget(ProductDetails, WidgetDataType.RECOMMENDATION);

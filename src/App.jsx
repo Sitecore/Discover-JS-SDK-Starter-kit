@@ -79,7 +79,7 @@ function App() {
                     <Route exact path="/" element={<HomeView />} />
                     <Route exact path="/search" element={<SearchView />} />
                     <Route exact path="/category/*" element={<CategoryView />} />
-                    <Route exact path="/product/detail/:sku/:prodId" element={<ProductDetailView />} />
+                    <Route exact path="/product/*/:sku" element={<ProductDetailView />} />
                     <Route exact path="/cart" element={<CartView />} />
                     <Route exact path="/order/confirmation" element={<OrderView />} />
                     <Route exact path="/500" element={<InternalServerErrorView />} />

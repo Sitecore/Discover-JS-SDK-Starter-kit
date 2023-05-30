@@ -5,6 +5,7 @@ import { theme } from '@sitecore-discover/ui';
 export const Header = styled.h3`
   color: ${theme.vars.palette.primary.main};
   font-family: ${theme.vars.typography.fontFamilySystem};
+  font-size: ${theme.vars.typography.fontSize3.fontSize};
 `;
 
 export const RecommendationContainer = styled.div``;

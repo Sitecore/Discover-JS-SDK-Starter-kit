@@ -3,6 +3,7 @@
 import { setWidget, setWidgetType, WidgetDataType } from '@sitecore-discover/react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { lazily } from 'react-lazily';
+import ProductDetails from './widgets/ProductDetails';
 
 // Get components to be used on `setWidgetType` or `setWidget` config functions
 const { Recommendation } = lazily(() => import('./widgets/BasicRecommendation'));
@@ -19,7 +20,7 @@ const { SearchQueryResults } = lazily(() => import('./widgets/SearchResults'));
 
 // Recommendation: Default widget setting
 setWidgetType(WidgetDataType.RECOMMENDATION, {
-  component: RecommendationCarousel,
+  component: Recommendation,
   options: {
     props: {
       title: 'Recommendations',
@@ -133,6 +134,15 @@ setWidget('rfkid_41', {
       title: 'Trending',
     },
   },
+});
+
+/** ************************************************** */
+/** * RECOMMENDATION CONFIGURATION - PDP  */
+/** ************************************************** */
+// Config widgets by rfkid
+setWidget('pdp', {
+  type: WidgetDataType.RECOMMENDATION,
+  component: ProductDetails,
 });
 
 /** ************************************************** */

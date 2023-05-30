@@ -2,7 +2,7 @@ import { widget, WidgetDataType } from '@sitecore-discover/react';
 import { usePreviewSearchWithLocks } from '@sitecore-discover/ui';
 import PropTypes from 'prop-types';
 import React, { useCallback, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import getProductUrl from '../../helpers/getProductUrl';
 
 import Loader from '../../components/Loader';
@@ -121,6 +121,7 @@ const PreviewSearchLeft = ({ defaultProductsPerPage }) => {
                               {products.map((p, i) => (
                                 <StyledSubItem key={i.toString()}>
                                   <Link
+                                    as={RouterLink}
                                     href={getProductUrl(p, true)}
                                     onClick={(event) => {
                                       event.preventDefault();
